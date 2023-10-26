@@ -10,10 +10,12 @@ import org.springframework.context.annotation.Profile;
 
 import com.projeto.projeto1.entities.Category;
 import com.projeto.projeto1.entities.Order;
+import com.projeto.projeto1.entities.Product;
 import com.projeto.projeto1.entities.User;
 import com.projeto.projeto1.entities.enums.OrderStatus;
 import com.projeto.projeto1.repositories.CategoryRepository;
 import com.projeto.projeto1.repositories.OrderRepository;
+import com.projeto.projeto1.repositories.ProductRepository;
 import com.projeto.projeto1.repositories.UserRepository;
 
 @Configuration
@@ -28,6 +30,9 @@ public class TestConfig implements CommandLineRunner {
 	
 	@Autowired
 	private CategoryRepository categoryRepository;
+	
+	@Autowired
+	public ProductRepository productRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -36,8 +41,15 @@ public class TestConfig implements CommandLineRunner {
 		Category cat2 = new Category(null, "Books"); 
 		Category cat3 = new Category(null, "Computers");
 		
-		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		Product p1 = new Product(null, "O Senhor dos Anéis", "J. R. R. Tolkien.", 90.5, ""); 
+		Product p2 = new Product(null, "Smart TV", "pra acessar fotos e vídeos que estão em seus outros aparelhos.", 2190.0, ""); 
+		Product p3 = new Product(null, "Macbook Pro", "O MacBook Pro é um notebook topo de linha da Apple.", 1250.0, ""); 
+		Product p4 = new Product(null, "PC Gamer", "Um PC Gamer é um computador pessoal especialmente projetado para jogos", 1200.0, ""); 
+		Product p5 = new Product(null, "O Pequeno Príncipe", "Antoine de Saint-Exupéry.", 100.99, "");
 		
+		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
+		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
+				
 		User u1 = new User(null, "Maria Brown", "maria@gmail.com", "988888888", "123456");
 		User u2 = new User(null, "Alex Green", "alex@gmail.com", "977777777", "123456");
 		
