@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.projeto.projeto1.entities.Category;
 import com.projeto.projeto1.entities.Order;
 import com.projeto.projeto1.entities.OrderItem;
+import com.projeto.projeto1.entities.Payment;
 import com.projeto.projeto1.entities.Product;
 import com.projeto.projeto1.entities.User;
 import com.projeto.projeto1.entities.enums.OrderStatus;
@@ -80,6 +81,11 @@ public class TestConfig implements CommandLineRunner {
 		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice());
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+		
+		Payment pay1 = new Payment(null, Instant.parse("2019-06-20T21:53:07Z"), o1);
+		o1.setPayment(pay1);
+		
+		orderRepository.save(o1);
 	}
 
 	
