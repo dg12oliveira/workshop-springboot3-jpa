@@ -11,7 +11,7 @@ configuração de banco de dados de teste(H2) e povoar o banco de dados, criaç�
 ![Modelo Conceitual](https://github.com/dg12oliveira/workshop-springboot3-jpa/blob/main/pasta%20img/Camadas%20L%C3%B3gicas.png)
 
 ## Instancia de Domínio
-![Modelo Conceitual](https://github.com/dg12oliveira/workshop-springboot3-jpa/blob/main/pasta%20img/inst%C3%A2ncia%20de%20dom%C3%ADnio%20.png)
+![Modelo Conceitual](https://github.com/dg12oliveira/workshop-springboot3-jpa/blob/main/pasta%20img/inst%C3%A2ncia%20de%20dom%C3%ADnio.png)
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/dg12oliveira/workshop-springboot3-jpa/blob/main/pasta%20img/Modelo%20de%20dom%C3%ADnio.png)
